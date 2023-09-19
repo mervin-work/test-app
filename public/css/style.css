@@ -1,0 +1,2463 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    color: #404040;
+    background: #f6f8f9;
+
+    /*background: url(../../images/sa-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;*/
+}
+main{
+    padding-top: 80px;
+    padding-left: 18vh !important;
+    padding-bottom: 30px;
+    padding-right: 30px !important;
+    /*background: #f6f8f9 !important;*/
+}
+a, a:hover{
+    text-decoration: none;
+}
+table caption{
+    font-size: 12px;
+}
+table tbody{
+    background: #fff !important;
+}
+button{
+    outline: 0 !important;
+    box-shadow: 0 !important;
+    transition-duration: 0.5s !important;
+}
+button:hover{
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
+}
+textarea{
+    resize: none;
+}
+.modal-header button:hover{
+    box-shadow: none !important;
+}
+.table-bordered thead th{
+    background: #3257a8;
+    color: #fff;
+}
+#calendar table tbody{
+    background: transparent !important;
+}
+#calendar .fc-view-container{
+    background: #fff !important;
+}
+
+
+/*HELPER CLASSES*/
+.m-0{
+    margin: 0px;
+}
+.mr-0{
+    margin-right: 0px !important;
+}
+.mr-10{
+    margin-right: 10px !important;
+}
+.mt-10{
+    margin-top: 10px !important;
+}
+.mt-20{
+    margin-top: 20px !important;
+}
+.p-0{
+    padding: 0px;
+}
+.p-10{
+    padding: 10px;
+}
+.p-20{
+    padding: 20px;
+}
+.pt-4px{
+    padding-top: 4px;
+}
+.inline-b{
+    display: inline-block !important;
+}
+.w-15{
+    width: 15%;
+}
+.w-20{
+    width: 20%;
+}
+.w-40{
+    width: 40% !important;
+}
+.w-60{
+    width: 60%;
+}
+.w-80{
+    width: 80%;
+}
+.fs12{
+    font-size: 12px;
+}
+.fs14{
+    font-size: 14px;
+}
+.custom-container, .add-container{
+    box-shadow: 0 3px 10px 0px rgba(0, 0, 0, .10);
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    margin-right: 10px;
+    background: #fff;
+}
+.add-container{
+    background: none;
+}
+.header-link{
+    color: #f5f5f5;
+}
+.has-search .form-control{
+    padding-left: 2.375rem;
+    border-radius: 18px;
+}
+.modal .has-search .form-control{
+    border-radius: 4px;
+}
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+.header-link, .header-link:hover{
+    color: #c5ccd3 !important;
+    font-weight: 600 !important;
+    margin-right: 10px;
+    text-decoration: none;
+}
+.header-link i{
+    font-size: 16px;
+    margin-left: 12px;
+}
+.header-cap{
+    padding-top: 4px;
+}
+.header-cap span{
+    color: #333 !important;
+    font-weight: 600;
+}
+.add-button{
+    border-radius: 50%;
+    background: #009933;    
+    color: #fff;
+    width: auto !important;
+}
+.add-button:hover{
+    color: #fff;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
+    background: #00b33c;
+}
+.proceed-btn{
+    background: #009933;
+    color: #fff;
+    width: 100%;
+    margin-top: 100%;
+}
+.edit-profile-btn{
+    background: #009933;
+    color: #fff;
+    width: auto;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.add-services{
+    background: #009933;
+    color: #fff !important;
+    width: auto;
+}
+.proceed-btn{
+    margin-top: 20px;
+    font-size: 14px;
+}
+.edit-profile-btn:hover, .proceed-btn:hover{
+    color: #fff;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
+    background: #00b33c;
+}
+#modal-editData-hospital .modal-header, #modal-editData-specialization .modal-header{
+    background: #3257a8 !important;
+    color: #fff;
+    border-radius: 0px;
+}
+#modal-deleteData .modal-header, #modal-deleteData-hospital .modal-header{
+    background: #cc0000 !important;
+    color: #fff;
+    border-radius: 0px;
+}
+#modal-deleteData .btn-danger, #modal-deleteData .btn-danger:hover,
+#modal-deleteData-hospital .btn-danger, #modal-deleteData-hospital .btn-danger:hover{
+    background: #cc0000 !important;
+    color: #fff;
+    border-color: #cc0000;
+}
+.modal-header .close{
+    color: #fff !important;
+    opacity: 1 !important;
+}
+.modal .modal-footer .done-btn{
+    background: #3257a8;
+    color: #fff !important;
+}
+.modal .modal-footer .done-btn:hover{
+    background: #4d79ff;
+}
+.modal .modal-header{
+    background: #3257a8;
+    color: #fff;
+    border-radius: 0px !important;
+}
+#modal-payment i{
+    font-size: 42px;
+}
+#modal-payment h4{
+    margin-top: 6px;
+}
+#modal-payment .payment{
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 3px 10px 0px rgba(0, 0, 0, .10);
+    padding: 10px;
+    margin: 10px 0px;
+    color: #3257a8;
+}
+#modal-payment .payment:hover{
+    background: #3257a8;
+    cursor: pointer;
+    color: #fff;
+    transition: .5s;
+}
+#modal-add-assistant p{
+    margin-bottom: 4px;
+}
+.modal-footer .btn-yes{
+    background: #009933;
+    color: #fff;
+}
+.fa-pencil, .fa-check-circle, .fa-download, 
+.table .fa-plus{
+    font-size: 22px;
+    color: #009933;
+    margin-right: 10px;
+}
+.table .fa-plus, .table .fa-file-image-o{
+    color: #3257a8;
+    font-size: 22px;
+}
+.fa-trash, .fa-times-circle{
+    font-size: 24px;
+    color: #dc3545;
+    color: #f44336;
+}
+.fa-eye{
+    font-size: 24px;
+    color: #3257a8;
+}
+.fa-folder, .fa-folder-open{
+    margin-right: 10px;
+    color: #f4ca20;
+}
+.btn-removeRow{
+    color: #fff !important;
+    border-radius: 50%;
+}
+.sampledoc-img{
+    width: 60%;
+    border-radius: 50%;
+}
+#previewPicture, .userphoto-container img{
+    width: 100%;
+    height: 236px;
+    border-radius: 50%;
+}
+.fc-unthemed td.fc-today {
+    background: #89a3dc !important;
+}
+.fc .fc-row .fc-content-skeleton table, .fc .fc-row .fc-content-skeleton td, 
+.fc .fc-row .fc-mirror-skeleton td{
+    background: none !important;
+}
+.vidcustom-btn{
+    position: absolute;
+    right: 15%;
+    bottom: 3%;
+}
+.vidcustom-btn button, .vidcustom-btn button:hover{
+    color: #fff;
+    font-size: 22px;
+    box-shadow: none !important;
+    outline: none !important;
+}
+.vidPrescription-div, .vidNotes-div{
+    display: none;
+    width: 24.69%;
+    height: 100vh;
+    padding: 20px;
+    background: url('../../images/sa-bg.png');
+    background-size: cover;
+    vertical-align: top; 
+}
+.vidPrescription-div h3, .vidNotes-div h3{
+    display: inline-block;
+    vertical-align: initial;
+}
+.vidPrescription-div i, .vidNotes-div i{
+    font-size: 28px;
+    margin-right: 10px;
+}
+#meet{
+    position: relative;
+    height: 100vh;
+}
+.vidPrescription-div .add-button i{
+    font-size: 16px;
+    margin-right: 0px;
+}
+.vidPrescription-div .footer, .vidNotes-div .footer{
+    position: absolute;
+    bottom: 0;
+    width: 29%;
+}
+.vidPrescription-div .footer hr, .vidNotes-div .footer hr{
+    margin-bottom: 4px;
+}
+.vidPrescription-div .footer p, .vidNotes-div .footer p{
+    text-align: center;
+    font-size: 12px;
+}
+.vidNotes-div textarea{
+    height: 70vh;
+    outline: none !important;
+    box-shadow:  none !important;
+}
+.vidPrescription-div .hide-div, .vidNotes-div .hide-div{
+    background: rgba(0,0,0,.5);
+    font-size: 14px;
+    color: #fff !important;
+}
+.vidPrescription-div .hide-div i, .vidNotes-div .hide-div i{
+    font-size: 12px;
+    margin-right: 5px !important;
+}
+
+/*NAV*/
+nav{
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    color: #333;
+    padding: .75rem 1rem !important;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .10);
+}
+nav a, nav a:hover{
+    margin-right: 20px;
+    font-size: 20px !important;
+    color: #3257a8;
+}
+nav h5 i{
+    font-size: 28px !important;
+    margin-right: 10px;
+}
+nav h5{
+    margin-top: 4px;
+    font-size: 22px;
+    color: #3257a8;
+    font-weight: 600;
+}
+
+
+/*NAV NOTIFICATION*/
+#notificationDiv{
+    padding: 0px 20px 20px 20px;
+    border: 2px solid #fafafa;
+    background: #fff;
+    width: 360px;
+    height: 88vh;
+    position: absolute;
+    right: 58px;
+    top: 45px;
+    border-radius: 8px;
+    box-shadow: 0 6px 10px 5px rgba(0,0,0,0.2);
+    display: none;
+    color: #333;
+    transition: 0.5s !important;
+}
+#notificationDiv img{
+    margin-right: 10px;
+}
+#notificationDiv h5{
+    color: #fff;
+    margin-bottom: 0px;
+    font-size: 16px;
+    text-align: left;
+}
+#notificationDiv p{
+    font-size: 12px;
+    font-style: italic;
+}
+.notif-header{
+    margin-left: -22px;
+    margin-right: -22px;
+    background: #3257a8;
+    padding: 10px;
+}
+.notification-content{
+    height: 68vh;
+    margin-top: 10px;
+    overflow: auto;
+}
+.notification-content .notif-alert-highlight{
+    margin-right: -8px;
+}
+.notif-viewMore{
+    background: #3257a8;
+    color: #fff;
+    width: 100%;
+    font-size: 14px;
+    margin-top: 20px;
+}
+.notif-viewMore:hover{
+    color: #fff;
+    background: #4d79ff;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
+}
+.hover-viewNotif{
+    opacity: 0;
+    background: #3257a8;
+    border-radius: 8px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 55px;
+    padding-top: 15px;
+}
+.hover-viewNotif:hover{
+    opacity: 0.9;
+}
+.hover-viewNotif a, .hover-viewNotif a:hover{
+    color: #fff !important;
+    font-size: 16px !important;
+    text-decoration: none;
+    padding-left: 35px;
+    letter-spacing: .5px;
+}
+.notification-content .tri{
+    width: 20px;
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+    border-bottom: 20px solid #3257a8;
+    position: absolute;
+    top: -12px;
+    left: 305px;
+    z-index: 9999;
+}
+
+/*CUSTOM SCROLLBAR*/
+.custom-scroll::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+    border-radius: 6px;
+}
+.custom-scroll::-webkit-scrollbar, #mySidebar::-webkit-scrollbar{
+    width: 8px;
+    background-color: #F5F5F5;
+}
+.custom-scroll::-webkit-scrollbar-thumb, #mySidebar::-webkit-scrollbar-thumb{
+    -webkit-box-shadow: inset 0 0 6px #1B2A72;
+    background-color: #1B2A72;
+    border-radius: 6px;
+}
+
+/*SIDEBAR*/
+#sidebarFull{
+    background: #3257a8;
+    height: 100vh;
+    width: 20%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 9999;
+    padding: 10px 14px;
+    font-size: 24px;
+    transition: 0.5s !important;
+    display: none;
+}
+#sidebarFull ul{
+    margin-top: 15vh;
+}
+#sidebarFull ul li i{
+    margin-right: 25px;
+    font-size: 24px;
+    width: 15%;
+    text-align: center;
+}
+#sidebarFull ul li{
+    cursor: pointer;
+    padding: 10px;
+    margin-top: 10px;
+}
+#sidebarFull ul li a{
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+}
+#sidebarFull ul li a:hover{
+    color: #fff;
+}
+#sidebarFull ul .active{
+    background: #233d76 !important;
+    border-radius: 8px;
+}
+#sidebarFull ul li:hover{
+    background: #294889;
+    border-radius: 8px;
+    transition: 0.5s;
+}
+#closeSidebar{
+    float: right;
+    font-size: 24px;
+    color: #fff;
+    box-shadow: none !important;
+}
+.sidebar-toggle{
+    width: 5%;
+    height: 100vh;
+    background: #3257a8;
+    color: #fff;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 9999;
+    text-align: center;
+    padding: 4px;
+}
+.sidebar-toggle button, .sidebar-toggle button:hover{
+    font-size: 24px;
+    margin-top: 8px;
+    color: #fff;
+    box-shadow: none !important;
+}
+.sidebar-toggle ul{
+    margin-top: 60px;
+}
+.sidebar-toggle ul li{
+    margin-top: 25px;
+    margin-left: 1px;
+}
+.sidebar-toggle ul li i{
+    width: 28px !important;
+}
+.sidebar-toggle ul li a{
+    font-size: 26px !important;
+    color: #fff;
+    padding: 10px 14px;
+}
+.sidebar-toggle ul .active a, .sidebar-toggle ul li a:hover{
+    background: #fff !important;
+    color: #3257a8 !important;
+    border-radius: 4px;
+    transition: 0.5s;
+}
+.sidebar-toggle .fa-credit-card-alt{
+    font-size: 24px;
+}
+
+/*TAGIT CUSTOM CSS*/
+ul.tagit{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding: 10px !important;
+    border-radius: 4px;
+    border-color: #ced4da;
+}
+
+/*SUPER ADMIN LOGIN PAGE*/
+.sa-loginpage-section{
+    background: url('../../images/sa-bg.png');
+    background-size: cover;
+    height: 100vh;
+    padding-top: 8%;
+}
+.sa-loginform{
+    padding: 20px;
+    width: 35%;
+    margin: 0 auto;
+    border-radius: 4%;
+}
+.sa-loginform h1, .loginform h1{
+    font-size: 38px;
+    font-weight: 600;
+    color: #3257a8;
+    margin-bottom: 30px;
+    vertical-align: sub;
+}
+.sa-loginform input, .loginform input{
+    padding: 14px 18px;
+    height: calc(2.875rem + 2px);
+    font-size: 15px;
+}
+.sa-loginform .login-btn{
+    font-size: 1em;
+    border-radius: 0.25rem;
+    padding: 15px 48px;
+    margin-top: 30px;
+}
+.sa-loginform .footer-caption, .loginform .footer-caption{
+    font-size: 10px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+}
+.loginform .footer-caption{
+    font-size: 12px;
+    left: 30%;
+}
+.sa-loginform a{
+    font-size: 12px;
+    float: right;
+    margin-top: 10px;
+    color: #333;
+}
+.loginpage{
+    height: 100vh;
+    background: url('../../images/admin-bg.png');
+    background-size: cover;
+}
+.loginform{
+    background: #ffff;
+    padding: 60px 30px;
+    width: 30%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+}
+.loginform h1{
+    margin-bottom: 40px;
+}
+.loginform form{
+    margin-top: 20px;
+}
+.loginform .login-btn, .sa-loginform .login-btn, .confirmPass-btn{
+    background: #3257a8;
+    color: #fff !important;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 0.25rem;
+}
+.loginform .login-btn, .confirmPass-btn, .deactivateAcct-btn{
+    padding: 12px 20px;
+    margin-top: 40px;
+}
+.loginform .login-btn:hover, .sa-loginform .login-btn:hover, .confirmPass-btn:hover{
+    background: #4d79ff;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
+}
+.loginform .create-acct-btn{
+    background: #009933;
+    width: 100%;
+    color: #fff;
+    padding: 12px 20px;
+}
+.loginform .create-acct-btn:hover{
+    background: #00b33c;
+}
+.loginform span a{
+    font-size: 13px;
+    color: #495057;
+    padding-left: 2px;
+    float: right;
+    margin-top: 10px;
+}
+.loginform span a:hover{
+    text-decoration: none;
+}
+.loginform p{
+    margin-top: 40px;
+    text-align: center;
+    font-size: 11px;
+    margin-bottom: 0;
+}
+
+/*SUPER ADMIN HOMEPAGE*/
+.analytics-info, .analytics-specialization{
+    box-shadow: 0 3px 10px 0px rgba(0, 0, 0, .10);
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    flex: 0 0 49%;
+    margin-right: 10px;
+    background: #fff;
+}
+.analytics-info h5{
+    margin-top: 30px;
+    color: #3257a8;
+    font-weight: 600;
+}
+.analytics-info p, .analytics-specialization p{
+    font-size: 48px;
+    color: #404040;
+}
+.analytics-specialization h5{
+    color: #3257a8;
+    font-weight: 600;
+    font-size: 28px;
+}
+.declined-user{
+    margin-top: 10px !important;
+}
+.declined-user p{
+    padding-top: 8px;
+    margin-bottom: 0px;
+}
+.declined-user textarea{
+    height: 35vh;
+}
+
+/*ADMIN PRE ENROLLED DOCS*/
+.table-pre-enrolled-docs .fa-eye{
+    font-size: 24px;
+    color: #3257a8;
+}
+.doctor-approval-info h5{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+.doctor-approval-info p{
+    margin-bottom: 0;
+    padding-top: 6px;
+}
+.view-license-btn{
+    width: 100%;
+    font-size: 20px;
+    padding: 8px;
+    background: #fafafa;
+    border: 2px solid #00b33c;
+    color: #00b33c;
+}
+.view-license-btn:hover{
+    background: #00b33c;
+    color: #fff;
+    cursor: pointer;
+}
+.accept-doc-btn{
+    background: #009933;
+    color: #fff;
+    width: 14%;
+    margin-right: 10px;
+}
+.decline-doc-btn{
+    background: #cc0000;
+    color: #fff;
+    width: 14%;
+}
+.accept-doc-btn i, .decline-doc-btn i{
+    margin-right: 10px;
+    color: #fff !important;
+    font-size: 18px;
+}
+.accept-doc-btn:hover{
+    background: #00b33c;
+    color: #fff;
+}
+.decline-doc-btn:hover{
+    background: #ff0000;
+    color: #fff;
+}
+
+/*ADMIN USER - DOCTOR PAGE*/
+.enroll-doctor-btn{
+    font-size: 16px;
+    width: 16%;
+    border-radius: 4px;
+    margin: 10px 0;
+    box-shadow: 0 3px 10px 0px rgba(0, 0, 0, .10);
+    margin-right: 10px;
+    display: inline-block;
+    color: #009933;
+    background: #fff;
+    border: 2px solid #009933;
+}
+.enroll-doctor-btn:hover{
+    color: #fff;
+    background: #009933;
+}
+.doctor-enrollment .userphoto-container{
+    border: 2px solid #ccc;
+    height: 240px;
+    border-radius: 50%;
+    width: 55%;
+    margin: 10px auto;
+}
+.doctor-enrollment .upload-btn, .patient-profile .upload-btn{
+    background: #3257a8;
+    width: 55%;
+    margin-top: 30px;
+    color: #fff !important;
+    cursor: pointer;
+}
+.doctor-enrollment .upload-btn:hover, .patient-profile .upload-btn:hover{
+    background: #4d79ff;
+    border-color: #4d79ff;
+}   
+.doctor-enrollment input[type="file"], .doctor-approval-info input[type="file"],
+.patient-profile input[type="file"]{
+    display: none;
+}
+#doctorsProfile-tabs .nav-item, #patientProfile-tabs .nav-item, #patientFile-tabs .nav-item,
+#doctor-settings-tab .nav-item, #home-myHealthTracker .nav-item, #patient-medicalHistory-tabs .nav-item,
+#modal-medHistory-tab .nav-item, #doctorschedule-tabs .nav-item{
+    width: auto;
+    /*width: 19.3%;*/
+    margin-right: 10px;
+    text-align: center;
+}
+#doctorsProfile-tabs .nav-item .active, #doctorsProfile-tabs .nav-item .active:hover,
+#patientProfile-tabs .nav-item .active, #patientProfile-tabs .nav-item .active:hover,
+#patientFile-tabs .nav-item .active, #patientFile-tabs .nav-item .active:hover,
+#doctor-settings-tab .nav-item .active, #doctor-settings-tab.nav-item .active:hover,
+#home-myHealthTracker .nav-item .active,#home-myHealthTracker .nav-item .active:hover,
+#patient-medicalHistory-tabs .nav-item .active, #patient-medicalHistory-tabs .nav-item .active:hover,
+#modal-medHistory-tab .nav-item .active, #modal-medHistory-tab .nav-item .active:hover,
+#doctorschedule-tabs .nav-item .active, #doctorschedule-tabs .nav-item .active:hover{
+    background: #3257a8 !important;
+    border-color: #3257a8 !important;
+    color: #fff !important;
+}
+#doctorsProfile-tabs .nav-item .nav-link, #patientProfile-tabs .nav-item .nav-link, 
+#patientFile-tabs .nav-item .nav-link, #doctor-settings-tab .nav-item .nav-link,
+#home-myHealthTracker .nav-item .nav-link, #patient-medicalHistory-tabs .nav-item .nav-link,
+#modal-medHistory-tab .nav-item .nav-link, #doctorschedule-tabs .nav-item .nav-link{
+    background: #fff;
+    color: #3257a8;
+    border: 2px solid #3257a8;
+    box-shadow: 0 3px 10px 0px rgba(0, 0, 0, .10);
+}
+#doctorsProfile-tabs .nav-item .nav-link:hover, #patientProfile-tabs .nav-item .nav-link:hover, 
+#patientFile-tabs .nav-item .nav-link:hover, #doctor-settings-tab .nav-link:hover,
+#home-myHealthTracker .nav-item .nav-link:hover, #patient-medicalHistory-tabs .nav-item .nav-link:hover,
+#modal-medHistory-tab .nav-item .nav-link:hover, #doctorschedule-tabs .nav-item .nav-link:hover{
+    background: #4d79ff;
+    border-color: #4d79ff;
+    color: #fff;
+}
+.doctor-approval-info .practice-div{
+    padding: 15px 0px !important;
+    border: 1px solid #ced4da;
+    margin: 20px 0px 0px 0px !important;
+    border-radius: 8px;
+    background-color: #fafafa;
+}
+#doc-subscriptions p{
+    margin-right: 10px;
+    display: inline-block;
+}
+#doc-subscriptions .subscription-type{
+    font-size: 24px;
+    font-weight: 600;
+    margin-left: 20px;
+    color: #009933;
+}
+#pat-emr i{
+    margin-right: 10px;
+    color: #f4ca20;
+}
+#pat-emr .custom-container{
+    flex: 0 0 49.5%;
+}
+#pat-emr .lab-records-table i{
+    color: #3257a8;
+    font-size: 22px;
+    margin-right: 0;
+}
+#pat-emr .custom-container{
+    height: 70vh;
+}
+.emr-labcontent{
+    /*border: 1px solid #dee2e6;
+    border-radius: 8px;*/
+    padding: 0 20px;
+}
+.emr-labcontent a{
+    color: #404040;
+}
+.emr-innerfolder{
+    margin-left: 15px;
+    margin-top: 5px;
+}
+.emr-header{
+    background: #3257a8;
+    color: #fff;
+    padding: 8px;
+    border-radius: 4px;
+}
+.inner-file{
+    font-size: 14px;
+}
+.inner-file:hover{
+    text-decoration: underline;
+}
+.emr-labcontent input[type="checkbox"]{
+    margin-right: 5px;
+}
+.emr-labcontent .inner-file{
+    display: inline-block;
+}
+.folderO, .folderO-xray, .folderO-treatment,
+.folderO-physician, .folderO-nursing, .folderO-consults,
+.folderO-allergies, .folderO-radiology, .folderO-lab{
+    display: none;
+    transition: 0.5s;
+}
+#emr-medicalRecordsSubFolders .innerfile-data{
+    height: 25px;
+    margin-left: 12px;
+}
+.file-date-div span{
+    margin-right: 10px;
+    font-size: 12px;
+}
+.prc-img-container{
+    padding: 20px;
+    background: #fafafa;
+    margin: 0;
+    height: 60vh;
+    border-radius: 4px;
+}
+
+/*ADMIN SUBSCRIPTION PAGE*/
+.pricing-btn{
+    background: #009933;
+    width: 28%;
+    color: #fff;
+}
+.pricing-btn:hover{
+    background: #00b33c;
+    color: #fff;
+}
+.pricing-btn i{
+    margin-right: 5px;
+}
+.edit-subsriptions-section textarea{
+    height: 25vh;
+}
+.pricing-section label{
+    padding-top: 8px;
+}
+.pricing-section p, .edit-subsriptions-section p{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+.edit-subsriptions-section .custom-control{
+    margin-top: 4px;
+}
+#add-subscription-modal .modal-dialog{
+    max-width: 70%;
+}
+.generate-btn{
+    width: 16%;
+    background: #009933;
+    color: #fff;
+    border: 2px solid #009933;
+}
+.generate-btn:hover{
+    color: #009933;
+    background: #fff;
+}
+.upload-btn{
+    width: 16%;
+    background: #3257a8;
+    border: 2px solid #3257a8;
+    color: #fff;
+}
+.upload-btn:hover{
+    color: #3257a8;
+    background: #fff;
+}
+.cancelSubscription-btn{
+    background: #cc0000;
+    color: #fff !important;
+    width: 50%;
+    cursor: pointer;
+}
+.cancelSubscription-btn:hover{
+    box-shadow: 0 3px 10px 0px rgba(0, 0, 0, .10);
+    background: #f66055;
+}
+
+/*ADMIN SETTINGS PAGE*/
+.add-data-btn{
+    background: #009933;
+    width: 18%;
+    color: #fff;
+}
+.add-data-btn:hover{
+    background: #00b33c;
+    color: #fff;
+}
+.add-data-btn i{
+    margin-right: 5px;
+}
+.table-settings-specialization .fa-trash{
+    font-size: 24px;
+    color: #f44336;
+}
+.table-settings-specialization .fa-pencil{
+    font-size: 22px;
+    color: #009933;
+    margin-right: 10px;
+}
+#settings-prescriptions input[type="checkbox"]{
+    vertical-align: -webkit-baseline-middle;
+}
+.presc-preview{
+    height: 980px;
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    position: relative;
+    background: url(../../images/sa-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 3px 10px 0px rgba(0, 0, 0, .10);
+}
+.presc-preview p{
+    margin-bottom: 2px;
+}
+.presc-preview .h-address{
+    font-size: 12px;
+}
+.presc-preview .controlNo{
+    position: absolute;
+    bottom: 0;
+    font-size: 10px;
+}
+#settings-prescriptions .sign{
+    margin: 10px 0;
+    background: #ccc;
+    height: 25vh;
+}
+#settings-prescriptions .footer{
+    position: absolute;
+    bottom: 25px;
+    right: 10px;
+    font-size: 10px;
+}
+#settings-prescriptions hr{
+    /*position: absolute;
+    bottom: 0;
+    border: 1px solid #333;
+    width: 96%;*/
+}
+#settings-prescriptions .footer .sign{
+    height: 10vh;
+}
+#settings-prescriptions .footer p{
+    font-size: 14px;
+}
+#settings-prescriptions .update-settings{
+    color: #fff !important;
+    width: 100%;
+    margin-top: 50px; 
+}
+#settings-prescriptions .rxlogo{
+    font-size: 18px;
+    padding-top: 4px;
+    font-weight: 600;
+}
+
+/*ADMIN REGISTRATION PAGE*/
+.registration-section{
+    background: url('../../images/sa-bg.png');
+    background-size: cover;
+    height: 100vh;
+    padding: 20px;
+}
+.registration-section .regform{
+    background: #fff;
+    padding: 20px;
+    width: 35%;
+    margin: 0 auto;
+    border-radius: 4px;
+    height: 590px;
+    overflow: auto;
+    box-shadow: 0 3px 10px 0px rgba(0, 0, 0, .10);
+    border: 1px solid #dee2e6;
+}
+.registration-section form{
+    margin-top: 20px;
+}
+.regform h1{
+    font-size: 48px;
+    font-weight: 600;
+    color: #3257a8;
+}
+.regform p{
+    margin-bottom: 4px;
+    font-size: 12px;
+    color: #bcbcbc;
+}
+.regform label{
+    font-size: 12px;
+    padding-top: 4px;
+}
+.regform label a{
+    font-weight: 600;
+}
+.regform span{
+    color: #e32;
+}
+.regform .btn-submit-reg{
+    background: #294172;
+    width: 100%;
+    padding: 8px 10px;
+    color: #fff;
+    letter-spacing: 1.5px;
+}
+.regform .btn-submit-reg:hover, .registration-section .doctor-details .btn-submit-reg:hover{
+    color: #fff;
+    background: #3257a8;
+}
+.registration-section .doctor-details{
+    display: block;
+    background: #fff;
+    padding: 20px;
+    width: 35%;
+    margin: 0 auto;
+    border-radius: 4px;
+    height: 590px;
+    overflow: auto;
+    box-shadow: 0 3px 10px 0px rgba(0, 0, 0, .10);
+    border: 1px solid #dee2e6;
+}
+.registration-section span{
+    color: #f44336;
+    margin-left: 5px;
+}
+.registration-section .doctor-details h5{
+    font-size: 22px;
+    color: #3257a8;
+    font-weight: 600;
+}
+.registration-section .doctor-details p{
+    font-size: 12px;
+    color: #bcbcbc;
+    margin-bottom: 0;
+    padding-top: 12px;
+}
+.registration-section .doctor-details input, .registration-section .doctor-details select{
+    margin-top: 4px;
+    font-size: 14px;
+}
+.registration-section .doctor-details .btn-submit-reg{
+    /*margin-top: 10%;
+    width: 40%;
+    position: absolute;
+    bottom: 0;
+    right: 3%;*/
+
+    background: #294172;
+    color: #fff;
+    width: 100%;
+    letter-spacing: 1.5px;
+    margin-top: 10px;
+}
+.btn-back-reg{
+    background: #f44336;
+    color: #fff;
+    margin-right: 10px;
+    width: 100%;
+    letter-spacing: 1.5px;
+    margin-top: 10px
+}
+.btn-back-reg:hover{
+    color: #fff;
+    background: #c32232;
+}
+#docRegistrationStep2, #docRegistrationStep3, #docRegistrationStep4{
+    display: none;
+}
+.prc-div{
+    height: 40vh !important;
+    border-radius: 4px;
+    border: 1px solid #f5f5f5;
+    margin: 10px 0;
+    background: #fafafa;
+    padding: 10px;
+}
+.prc-div img{
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+}
+
+/*DOCTOR's PORTAL*/
+.doctor-home-section1{
+    margin-top: 20px;
+}
+.doctor-home-section1 ul li{
+    margin-top: 10px;
+    font-size: 18px;
+}
+.doctor-home-section1 ul li i{
+    font-size: 22px;
+    margin-right: 10px;
+}
+.doctor-home-section2 .custom-container{
+    flex: 0 0 48.5%;
+}
+.doctor-home-section2 .custom-container h5{
+    margin-top: 30px;
+    color: #3257a8;
+    font-weight: 600;
+}
+.doctor-home-section2 .custom-container h2{
+    display: inline-block;
+    margin-left: 10px;
+    color: #404040;
+}
+.doctor-home-section2 .custom-container p{
+    font-size: 112px;
+    color: #404040;
+    margin: 0;
+}
+.file-request-btn{
+    background: #009933;
+    color: #fff;
+    width: 45%;
+    position: relative;
+}
+.file-request-btn:hover{
+    color: #fff;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
+    background: #00b33c;
+}
+.file-request-btn i{
+    margin-right: 10px;
+}
+.caption-validity{
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #f44336;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.notification-counter{
+    position: absolute;
+    background: #cc0000;
+    top: -10px;
+    right: -4%;
+    width: 10%;
+    height: 30px;
+    padding: 4px;
+    font-size: 14px;
+    border-radius: 50%;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
+}
+.add-appointment-btn, .doctor-home-section1 .btn-viewProfile, 
+.doctor-home-section1 .btn-viewHealthTracker, .doctor-home-section1 .btn-sendEmr{
+    width: auto;
+    font-size: 15px;
+    background: #3257a8;
+    margin: 10px auto;
+    color: #fff;
+    margin-right: 10px;
+    border: 2px solid #3257a8;
+    display: inline-block;
+}
+.add-recurring-btn{
+    background: #009933;
+    color: #fff !important;
+    width: 100%;
+}
+.add-recurring-btn:hover{
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
+    background: #00b33c;
+}
+#add-appointment-div, #add-recurring-div{
+    height: 614.5px !important;
+}
+/*.add-appointment-btn:hover, .doctor-home-section1 .btn-viewProfile:hover,
+.doctor-home-section1 .btn-viewHealthTracker:hover, .doctor-home-section1 .btn-sendEmr:hover{
+    background: #fff;
+    color: #3257a8;
+    font-weight: 600;
+    border: 2px solid #3257a8;
+}*/
+.doctor-sched-section2 .schedule-list{
+    padding: 15px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    height: 72vh;
+    overflow: auto;
+}
+.doctor-sched-section2 h2{
+    color: #3257a8;
+    margin-bottom: 0;
+}
+.doctor-sched-section2 #add-appointment-div, .doctor-sched-section2 #add-recurring-div{
+    display: none;
+    height: 477.5px;
+    overflow: auto;
+}
+.doctor-sched-section2 #add-appointment-div p, .doctor-sched-section2 #add-recurring-div p{
+    margin-bottom: 4px;
+}
+.doctor-sched-section2 #add-appointment-div button, .doctor-sched-section2 #add-recurring-div button{
+    background: #009933;
+    width: 25%;
+    color: #fff;
+}
+#add-recurring-div .add-button{
+    margin-top: 28px;
+}
+.doctor-sched-section2 #add-appointment-div h5, .doctor-sched-section2 #add-recurring-div h5{
+    color: #3257a8;
+    font-size: 22px;
+    font-weight: 600;
+}
+.doctor-sched-section2 #add-appointment-div button:hover, 
+.doctor-sched-section2 #add-recurring-div button:hover{
+    background: #00b33c;
+}
+.schedule-g, .schedule-available, .upcoming-appointments-div{
+    margin: 0;
+    padding: 10px;
+    background: #009933;
+    border-radius: 5px;
+    color: #fff;
+    margin-top: 10px;
+}
+.schedule-g, .schedule-available:hover, .upcoming-appointments-div:hover{
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
+    cursor: pointer;
+}
+.schedule-g p, .schedule-available p{
+    margin-bottom: 0;
+    font-size: 14px;
+}
+.schedule-g h5, .schedule-available h5, .resched-div h5{
+    font-size: 22px;
+}
+.schedule-available, .upcoming-appointments-div{
+    background: #f2f2f2;
+    color: #404040;
+    border: 1px solid #dee2e6;
+}
+.doctor-sched-section3 img{
+    width: 75%;
+    height: 250px;
+}
+.doctor-sched-section3 p{
+    margin-bottom: 0px;
+}
+.doctor-sched-section3 .custom-container{
+    width: 32.27%;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.doc-billing-section p{
+    display: inline-block;
+    margin-bottom: 0px;
+}
+.doc-billing-section .subscription-type{
+    font-size: 24px;
+    font-weight: 600;
+    margin-left: 20px;
+    color: #009933;
+}
+.doc-billing-section button{
+    width: 50%;
+    margin-top: 20px;
+}
+.doc-add-billing{
+    width: 32.27%;
+    height: 75vh;
+    display: inline-block;
+    margin-right: 10px !important;
+    vertical-align: top;
+    position: relative;
+    margin-top: 10px !important;
+}
+.doc-add-billing:hover{
+    cursor: pointer !important;
+}
+.doc-add-billing h3{
+    font-size: 38px;
+    font-weight: 600;
+    color: #3257a8;
+}
+.doc-add-billing ul li{
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+.doc-add-billing button, .doc-add-billing button:hover{
+    width: 100%;
+    color: #fff;
+    background: #3257a8;
+    display: block;
+    margin-top: 40px;
+}
+.doc-add-billing .annual-billing{
+    position: relative;
+    margin-top: 10px !important;
+}
+.doc-add-billing .annual-billing span{
+    position: absolute;
+    width: 50%;
+    color: red;
+    bottom: -25px;
+    right: 25%;
+    font-size: 14px;
+    font-weight: 600;
+}
+#settings-security p, #settings-notif p, .doctor-chat-contacts p, .doctor-chat-section p{
+    margin-bottom: 4px;
+    color: #3257a8;
+    font-weight: 600;
+}
+.confirmPass-btn{
+    margin-top: 20px !important;
+}
+.deactivateAcct-btn{
+    width: 100%;
+    background: #f44336;
+    color: #fff !important;
+    margin-top: 20px !important;
+}
+.deactivateAcct-btn:hover{
+    background: #f66055;
+}
+.update-settings{
+    background: #3257a8;
+}
+.update-settings:hover{
+    background: #4d79ff;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
+}
+.doctor-chat-contacts{
+    width: 30%;
+    height: 75vh;
+    margin-top: 10px !important;
+    padding: 10px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px !important;
+}
+.chat-list .contact{
+    border-radius: 8px;
+    margin: 10px 0px;
+    padding: 8px;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid #dee2e6;
+}
+.chat-list .contact .notification-counter{
+    position: absolute;
+    background: #cc0000;
+    top: 28%;
+    right: 10%;
+    width: 9%;
+    height: 30px;
+    padding: 4px;
+    color: #fff !important;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 50%;
+}
+.chat-list .contact h5{
+    margin-top: 14px;
+}
+.chat-list .active{
+    background: #f2f2f2;
+}
+.doctor-chat-section{
+    width: 68%;
+    height: 75vh;
+    margin-top: 10px !important;
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+}
+.typing-section{
+    padding: 0px 14px;
+    position: absolute;
+    width: 98%;
+    bottom: 4%;
+
+}
+.doctor-chat-section .typing-section input{
+    height: 50px;
+    outline: 0;
+    box-shadow: none;
+    border-color: #ced4da !important;
+}
+.doctor-chat-section .typing-section .btn-send-chat{
+    color: #3257a8;
+    width: 10%;
+    font-size: 24px;
+    position: absolute;
+    top: 0%;
+    right: 1.9%;
+    border-radius: 4px;
+    height: 50px;
+    border: 0 !important;
+    box-shadow: none;
+}
+.conversation-section{
+    height: 55vh;
+    margin: 0;
+    overflow: hidden;
+    padding: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+.message-l, .message-r{
+    display: block;
+    background: #3257a8;
+    padding: 12px 10px;
+    border-radius: 8px;
+    height: auto;
+    color: #fff;
+    width: 100% !important;
+}
+.message-r{
+    background: #009933;
+}
+.message-l .col-md-12, .message-r .col-md-12{
+    width: auto !important;
+}
+#emr-medicalRecordsSubFolders .custom-scroll{
+        height: 40vh;
+    overflow: auto;
+}
+.emr-buttons button{
+    margin-right: 10px;
+    width: 18.29%;
+    display: inline-block;
+    color: #fff !important;
+}
+.emr-buttons .btn-upload{
+    background: #009933;
+}
+.emr-buttons .btn-upload:hover{
+    background: #00b33c;
+}
+.emr-buttons .btn-move{
+    background: #3257a8;
+}
+.emr-buttons .btn-move:hover{
+    background: #4d79ff;
+}
+.emr-buttons .btn-delete, .btn-removeRow{
+    background: #f44336;
+}
+.emr-buttons .btn-delete:hover, .btn-removeRow:hover{
+    background: #f66055;
+}
+#modal-send-data .has-search input{
+    border-radius: 4px !important;
+    margin-top: 4px;
+}
+.selected-files p{
+    margin-bottom: 0px;
+    padding: 8px 8px 8px 22px;
+    font-size: 14px;
+    font-weight: 600;
+    background: #f6f6f6;
+    border-radius: 4px;
+}
+#modal-onlineSched .add-button, #modal-recurringSched .add-button{
+    margin-top: 22px;
+}
+#modal-recurringSched .btn-removeRow{
+    position: relative;
+    font-size: inherit !important;
+    padding: .375rem .75rem;
+    top: 0;
+    right: 0;
+    font-size: 1rem;
+}
+.eduAttainment{
+    padding: 30px 0px !important;
+    border: 1px solid #ced4da;
+    margin: 20px 0px 0px 0px !important;
+    border-radius: 8px;
+    background-color: #fafafa;
+    position: relative;
+}
+.eduAttainment .btn-removeRow, .practice-div .btn-removeRow{
+    font-size: 12px;
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    padding: 4px 9px;
+}
+.practice-div{
+    position: relative;
+}
+.practice-div h5{
+    font-size: 16px;
+    color: #3257a8;
+}
+#regNextStep1{
+    margin-top: 25vh;
+}
+#regNextStep2{
+    margin-top: 15vh;
+}
+#viewDoctorPrescriptions, #prescriptionsList-inner, #docNotes-inner,
+#myRecords{
+    display: none;
+    position: relative;
+}
+#viewDoctorPrescriptions .close-btn,
+#myRecords .close-btn{
+    position: absolute;
+    top: 4%;
+    right: 5%;
+    color: #fff;
+    background: #ccc;
+}
+#prescriptionsList-inner button, #docNotes-inner button{
+    position: absolute;
+    top: -14px;
+    right: -14px;
+    background: #f44336;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 0.900rem;
+    box-shadow: 0 3px 10px 0px rgba(0, 0, 0, .10);
+}
+#docNotes-inner .btn-closeNotes{
+    top: -17px;
+    right: -2px;
+}
+#docNotes-inner textarea{
+    height: 40vh;
+    resize: none;
+}
+#docNotes-inner p{
+    font-size: 12px;
+    color: #ccc;
+    margin-top: 8px;
+}
+#attachments-tab .file-explorer{
+    border: 1px solid #ced4da;
+    margin: 0;
+    padding: 10px;
+    border-radius: 8px;
+    height: auto;
+    background: #fff;
+}
+#attachments-tab .folders{
+    margin-top: 10px;
+    padding-left: 10px;
+}
+#attachments-tab a{
+    color: #3257a8;
+}
+#attachments-tab a:hover:after{
+    font-family: FontAwesome;
+    content: "\f0da";
+    font-size: 18px;
+    position: absolute;
+    right: 8%;
+}
+#attachments-tab p, #attachments-tab input{
+    display: inline-block;
+    margin-bottom: 0;
+    color: #3257a8;
+}
+.upcoming-appointments-div h1{
+    font-size: 22px;
+    margin-bottom: 2px;
+    color: #3257a8;
+}
+.upcoming-appointments-div p{
+    margin-bottom: 2px;
+    font-size: 14px;
+}
+.upcoming-appointments-div img{
+    width: 100%;
+}
+#doctorschedule-tabs .nav-item{
+    width: 48.9%; 
+}
+#tabs-today, #tabs-upcoming{
+    height: 530px !important;
+    overflow: auto !important;
+}
+#doctorschedule-tabContent img{
+    width: 60%;
+    margin-top: 4px;
+}
+.modal .productImg{
+    height: 190px;
+    background: #ccc;
+}
+#modal-edit-product textarea, #modal-add-product textarea{
+    resize: none;
+    height: 15vh;
+}
+#modal-custom-clinicSched .form-control,
+#modal-custom-clinicSched label{
+    font-size: 14px;
+}
+#modal-recurringSched .modal-dialog{
+    max-width: 680px;
+}
+#modal-recurringSched .online{
+    max-height: 350px;
+    overflow: auto;
+}
+#docNotes-inner .btn-addnotes{
+    position: relative !important;
+    border-radius: 4px !important;
+    background: #3257a8 !important;
+    color: #fff;
+    top: none;
+    right: none;
+}
+#docNotes-inner .btn-download{
+    position: relative !important;
+    border-radius: 4px !important;
+    background: #009933!important;
+    color: #fff;
+}
+#docNotes-inner .btn-download i{
+    color: #fff !important;
+    font-size: 14px;
+}
+.billing-row{
+    box-shadow: 0 3px 10px 0px rgba(0, 0, 0, .10);
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    background: #fff;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 10px;
+    /*background: url(../../images/sa-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;*/
+}
+.billing-row h3{
+    display: inline-block;
+    color: #009933;
+    font-weight: 500;
+    font-size: 28px;
+}
+.billing-row p{
+    display: inline-block;
+    font-size: 20px;
+    float: right;
+    font-weight: 500;
+}
+
+
+
+/*PATIENT'S PORTAL*/
+.sa-loginform .create-acct-btn{
+    background: #009933;
+    color: #fff !important;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 0.25rem;
+    padding: 15px 48px;
+}
+.sa-loginform .create-acct-btn:hover{
+    background: #00b33c;
+}
+#patRegistrationStep1, #patRegistrationStep2, #patRegistrationStep3{
+    background: #fff;
+    padding: 20px;
+    width: 35%;
+    margin: 0 auto;
+    border-radius: 4px;
+    height: 580px;
+    overflow: auto;
+    box-shadow: 0 3px 10px 0px rgba(0, 0, 0, .10);
+    border: 1px solid #dee2e6;
+}
+#patRegistrationStep3{
+    width: 90%;
+}
+.patient-loginform h1{
+     color: #3257a8;
+     font-weight: 600;
+     font-size: 24px;
+}
+.p-reg-step1 p, .p-reg-step2 p, #patRegistrationStep3 p, #modal-add-appointment p{
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+.p-reg-step1 button, .p-reg-step2 button{
+    background: #294172;
+    width: 100%;
+    padding: 8px 10px;
+    color: #fff !important;
+    letter-spacing: 1.5px;
+    margin-top: 30px;
+}
+.p-reg-step1 button:hover, .p-reg-step2 button:hover{
+    background: #3257a8;
+}
+.patient-loginpage-section{
+    background: url('../../images/sa-bg.png');
+    background-size: cover;
+    height: 100vh;
+    padding-top: 2%;
+}
+#patRegistrationStep2, #patRegistrationStep3{
+    display: none;
+}
+#patRegistrationStep3 .custom-container{
+    width: 23%;
+    display: inline-block;
+    box-shadow: none;
+    transition: height 0.5s ease,
+                width 0.5s ease;
+}
+#patRegistrationStep3 .custom-container:hover{
+    box-shadow: 0 3px 10px 0px rgba(0, 0, 0, .10);
+    cursor: pointer;
+    width: 24.5%;
+}
+#patRegistrationStep3 .custom-container h5{
+    margin-top: 20px;
+    font-size: 24px;
+    color: #3257a8;
+}
+#patRegistrationStep3 .custom-container p{
+    font-size: 14px;
+    margin-bottom: 0px;
+    font-style: italic;
+}
+#modal-add-appointment .modal-dialog{
+    max-width: 720px;
+}
+#modal-add-appointment .calendar-div{
+    width: 100%;
+    background: #ccc;
+    padding: 10px;
+    height: 280px;
+}
+.patient-home-section1 .custom-container ul li img{
+    width: 8%;
+    margin-right: 10px;
+}
+.patient-home-section1 .custom-container ul li{
+    font-size: 22px;
+}
+.patient-home-section2 .custom-container{
+    flex: 0 0 48.99%;
+}
+.patient-home-section2 .custom-container h5{
+    color: #3257a8;
+    font-weight: 600;
+}
+.patient-home-section2 .custom-container input{
+    font-size: 32px;
+    color: #404040;
+    margin: 0;
+}
+.patient-home-section2 .custom-container span{
+    font-size: 12px;
+    color: #999;
+}
+.patient-home-section2 .custom-container a.up:before,
+.patient-home-section2 .custom-container a.down:before{
+    font-family: FontAwesome;
+    content: "\f0d8";
+    color: #009933;
+    font-size: 54px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+}
+.patient-home-section2 .custom-container a.down:before{
+    font-family: FontAwesome;
+    content: "\f0d7";
+}
+.patient-home-section2 .custom-container a:hover:before{
+    color: #00b33c;
+}
+.update-btn, .expand-btn{
+    background: #3257a8;
+    color: #fff !important;
+    width: auto;
+    font-size: 16px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.update-btn:hover{
+    background: #4d79ff;
+}
+.update-btn i, .expand-btn i{
+    margin-right: 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.expand-btn{
+    background: #009933;
+}
+.expand-btn:hover{
+    background: #00b33c;
+}
+#notificationDiv-patient{
+    padding: 0px 20px 20px 20px;
+    border: 2px solid #fafafa;
+    background: #fff;
+    width: 360px;
+    position: absolute;
+    right: 58px;
+    top: 45px;
+    border-radius: 8px;
+    box-shadow: 0 6px 10px 5px rgba(0,0,0,0.2);
+    display: none;
+    color: #333;
+    transition: 0.5s !important;
+}
+#notificationDiv-patient .notification-content{
+    height: auto;
+}
+#notificationDiv-patient .notification-content p{
+    text-align: left;
+    font-size: 15px;
+}
+#notificationDiv-patient img{
+    margin-top: 12px;
+}
+#notificationDiv-patient h5{
+    color: #fff;
+    margin-bottom: 0px;
+    font-size: 16px;
+    text-align: left;
+}
+#notificationDiv-patient .notification-content h5{
+    color: #3257a8;
+    margin-bottom: 5px;
+}
+#notificationDiv-patient .notification-content sub{
+    font-weight: 600;
+    color: #dc3545;
+}
+.patient-profile .remove-photo-btn{
+    display: block;
+    width: 55%;
+    margin: 0 auto;
+    background: #f44336;
+    color: #fff;
+}
+.patient-profile .remove-photo-btn:hover{
+    background: #f66055;
+}
+#modal-consultationHistory .modal-dialog{
+    max-width: 860px;
+}
+#modal-consultationHistory h5{
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #3257a8;
+}
+#modal-consultationHistory .modal-title{
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: normal;
+}
+#modal-consultationHistory p{
+    font-size: 22px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+#modal-prescription textarea{
+    height: 30vh;
+}
+#medHistory-records input{
+    display: block;
+    height: 44px;
+}
+#medHistory-records .has-search input{
+    border-radius: 4px;
+}
+#medHistory-records button{
+    background: #009933;
+    color: #fff;
+    width: 30%;
+}
+#medHistory-records button:hover{
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
+    background: #00b33c;
+}
+#medHistory-records .folderO, #medHistory-records .folderC{
+    color: #3257a8 !important;
+    font-size: 20px;
+}
+#medHistory-records .inner-file{
+    margin-left: 33px;
+    font-weight: 500;
+    color: #333;
+    font-size: 15px;
+}
+#medHistory-records h5{
+    color: #3257a8;
+}
+.patientConsultation-section2 .custom-container{
+    /*height: 75vh;*/
+}
+.patientConsultation-section2 #schedule-div h5{
+    margin-top: 20%;
+    font-weight: 600;
+}
+.patientConsultation-section2 #schedule-div button{
+    background: #009933;
+    color: #fff !important;
+    width: 40%;
+    margin-top: 15px;
+}
+.patientConsultation-section2 a:hover{
+    background: #00b33c;
+}
+#modal-patient-addAppointment .modal-body a{
+    display: block;
+    background: #3257a8;
+    color: #fff;
+    width: 80%;
+    margin: 20px auto;
+    padding: 12px;
+    border: 2px solid #3257a8;
+}
+#modal-patient-addAppointment .modal-body a:hover{
+    background: #fff;
+    color: #3257a8;
+    border: 2px solid #3257a8;
+    font-weight: 600;
+}
+.patientConsultation-section2 #patRegistrationStep3{
+    height: auto;
+    display: block;
+    width: 100%;
+}
+.patientConsultation-section2 #patRegistrationStep3 .custom-container{
+    height: auto;
+}
+.patientConsultation-section2 .schedule-list{
+    padding: 0 10px 0 0;
+    /* border: 1px solid #dee2e6; */
+    border-radius: 4px;
+    height: 63vh;
+    overflow: auto;
+}
+.patientConsultation-section2 h2{
+    color: #3257a8;
+}
+.patientConsultation-section2 .schedule-list h3{
+    /*margin-top: 15px;*/
+    font-size: 22px;
+}
+.resched-div{
+    margin: 0;
+    padding: 20px;
+    background: #ffcc00;
+    border-radius: 5px;
+    color: #fff;
+    margin-top: 10px;
+}
+.resched-div p{
+    margin: 0;
+    font-size: 14px;
+}
+.package-div{
+    border: 1px solid #dee2e6;
+    padding: 12px 10px;
+    border-radius: 8px;
+    background: #fafafa;
+    cursor: pointer;
+}
+.package-div img{
+    margin-top: 4px;
+    width: 58px;
+    margin-right: 10px;
+}
+.package-div h1{
+    margin-top: 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.package-div p{
+    margin-top: 30px;
+    font-size: 20px;
+}
+.package-list{
+    overflow: auto;
+    height: 70vh;
+    padding: 0px 30px;
+}
+#modal-package .hospitals{
+    border: 1px solid #dee2e6;
+    background: #009933;
+    margin: 20px 0;
+    border-radius: 4px;
+    color: #fff;
+    padding: 12px;
+    cursor: pointer;
+}
+#modal-package .hospitals i{
+    font-size: 48px;
+    background: #fff;
+    color: #009933;
+    padding: 10px 16px;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+#modal-package .hospitals h5, #modal-package .hospitals p{
+    margin-bottom: 3px;
+}
+#modal-package textarea{
+    height: 20vh;
+    margin-top: 10px;
+}
+.purchase-history-btn{
+    background: #009933;
+    color: #fff;
+    border: 2px solid #009933;
+    margin-right: -3px;
+}
+.purchase-history-btn:hover{
+    color: #009933;
+    border-color: #009933;
+    background: #fff;
+}
+.prescriptiondiv{
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    background: #fafafa;
+}
+.docprescription{
+    width: 45%;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    height: 780px;
+    position: relative;
+    background: url(../img/sa-bg.png);
+    background-size: cover;
+}
+.docprescription hr{
+    border-color: #dee2e6;
+}
+.docprescription .prescnotes{
+    width: 80%;
+    margin: 25% auto;
+    text-align: center;
+    padding: 20px;
+    height: auto;
+}
+.docprescription .prescnotes p{
+    font-size: 26px;
+}
+.docprescription .prescfooter{
+    border-top: 1px solid #dee2e6;
+    padding: 8px;
+    position: absolute;
+    width: 92%;
+    bottom: 0;
+}
+.docprescription .prescfooter p{
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 0px;
+}
+#viewDocNotes textarea{
+    height: 45vh;
+    resize: none;
+}
+.add-healthTracker{
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: none !important;
+}
+.add-healthTracker i{
+    font-size: 5em;
+    margin-top: 10px;
+    color: #009933;
+}
+#modal-addHealthTracker ul{
+    padding-left: 0px;
+    list-style: none;
+    font-size: 18px;
+}
+.patientConsultation-section2 .hospital-choices,
+.patientConsultation-section2 .services-choices{
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #fafafa;
+    margin-top: 10px;
+    color: #3257a8;
+}
+.patientConsultation-section2 .hospital-choices p{
+    margin: 0;
+    display: inline-block;
+    font-size: 20px;
+    vertical-align: middle;
+}
+.patientConsultation-section2 .hospital-choices img{
+    display: inline-block;
+    margin-right: 10px;
+    width: 40px;
+}
+.patientConsultation-section2 .services-choices p{
+    font-size: 20px;
+    color: #3257a8;
+    margin-bottom: 0;
+    padding: 4px 0px;
+}
+.patientConsultation-section2 .hospital .collapse{
+    margin-bottom: 20px;
+}
+.clicked{
+    background: #3257a8 !important;
+    border-color: #3257a8 !important;
+    color: #fff !important;
+}
+.patientConsultation-section2 .time-div,
+.patientConsultation-section2 .time-div-unavailable{
+    padding: 10px;
+    background: #009933;
+    border-radius: 5px;
+    color: #fff;
+    width: 47.5%;
+    text-align: center;
+    margin-right: 10px;
+    display: inline-block;
+    font-size: 20px;
+}
+.patientConsultation-section2 .time-div-unavailable{
+    background: #d9d9d9;
+    color: #333;
+    border: 1px solid #dee2e6;
+}
+.patientConsultation-section2 .time-div h5{
+    margin: 0;
+}
+
+
+/*VIDEO CONSULTATION*/
+.personsInQueue i, .setupdiv i{
+    font-size: 30px;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+.personsInQueue p{
+    font-size: 1.25rem;
+    padding: 10px;
+    background: #f6f8f9;
+    border-radius: 10px;
+}
+.setupdiv{
+    padding: 10px 20px;
+}
+.start-video{
+    background: #009933;
+    color: #fff !important;
+    font-size: 1.25rem;
+    margin-top: 35px;
+}
+.start-video:hover{
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17) !important;
+    background: #00b33c;
+}
+.video-body{
+    overflow: hidden;
+    height: 100vh;
+}
+.setupdiv i, .setupdiv p{
+    display: inline-block;
+    margin-right: 15px;
+}
+.setupdiv .fa-video-camera, .setupdiv .fa-video-camera,
+.setupdiv .fa-microphone, .setupdiv .fa-microphone-slash{
+    
+}
+
+
+/*Media Queries*/
+@media screen and (min-width: 1920px){
+    .registration-section .regform{
+        border-radius: 10px;
+        height: 95vh;
+    }
+    .regform h1{
+        font-size: 68px;
+    }
+    .regform p{
+        font-size: 18px;
+        margin-top: 10px;
+    }
+    .regform img{
+        width: 60px;
+    }
+    .registration-section .form-control{
+        padding: 14px 18px;
+        height: calc(3.875rem + 2px);
+        font-size: 22px;
+        margin-top: 20px !important;
+    }
+    .regform label{
+        font-size: 14px;
+    }
+    #regNextStep1 {
+        margin-top: 15vh;
+        font-size: 24px;
+        height: calc(3.875rem + 2px);
+    }
+}
+@media screen and (min-width: 1440px){
+    .loginform h1{
+        font-size: 68px;
+    }
+    .loginform img{
+        width: 20%;
+        vertical-align: top;
+    }
+    .loginform h5{
+        font-size: 24px;
+    }
+    .loginform .form-control{
+        padding: 14px 18px;
+        height: calc(3.875rem + 2px);
+        font-size: 18px;
+        margin-top: 20px !important;
+    }
+    .loginform .login-btn, .loginform .create-acct-btn{
+        padding: 14px 18px;
+        font-size: 24px;
+    }
+    .loginform span a{
+        font-size: 14px;    
+    }
+}
+@media screen and (max-width: 768px){
+    .loginform{
+        width: 38%;
+    }
+    .loginform h1{
+        font-size: 32px;
+        margin-bottom: 0;
+    }
+    .loginform img{
+        width: 40px;
+    }
+    .loginform h5{
+        font-size: 16px;
+        margin-top: 0;
+    }
+    .loginform span a{
+        font-size: 10px;
+    }
+    .loginform .login-btn, .loginform .create-acct-btn{
+        padding: .375rem .75rem;
+    }
+    .loginform .form-control{
+        height: calc(1.5em + .75rem + 2px);
+        padding: .375rem .75rem;
+        font-size: 14px;
+    }
+    .registration-section .regform{
+        width: 60%;
+        border-radius: 10px;
+        height: auto;
+    }
+    #regNextStep1 {
+        margin-top: 15vh;
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 640px){
+    .loginform{
+        width: 65%;
+        height: 90vh;
+        border-radius: 8px;
+        border: 1px solid #dee2e6;
+        box-shadow: 0 3px 10px 0px rgba(0, 0, 0, .10);
+        top: 30px;
+        left: 18%;
+        padding: 30px;
+    }
+    .loginform h1{
+        font-size: 42px;
+        margin-bottom: 40px;
+    }
+    .loginform img{
+        width: 50px;
+    }
+}
+@media screen and (max-width: 480px){
+    .loginpage, .registration-section{
+        padding: 0px;
+    }
+    .loginform, .registration-section .regform, #docRegistrationStep2,
+    #docRegistrationStep4{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        border-radius: 0px;
+        background: url(../../images/sa-bg.png);
+        background-size: cover;
+        border: none !important;
+    }
+    .loginform h5{
+        font-size: 20px;
+    }
+    .loginform hr{
+        display: none;
+    }
+    .loginform .form-control, .registration-section .regform .form-control,
+     #docRegistrationStep2 .form-control, #docRegistrationStep4 .form-control{
+        padding: 14px 18px;
+        height: calc(2.875rem + 2px);
+        font-size: 14px;
+    }
+    .loginform span a{
+        margin-bottom: 30px;
+    }
+    .loginform .login-btn, .loginform .create-acct-btn{
+        margin-top: 20px;
+        height: calc(2.875rem + 2px);
+    }
+    .registration-section .regform h1{
+        font-size: 42px;
+        margin-bottom: 30px;
+    }
+    #docRegistrationStep2 button, #docRegistrationStep4 button{
+        margin-top: 20px;
+        height: calc(2.875rem + 2px)
+    }
+
+  }
